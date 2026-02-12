@@ -6,3 +6,4 @@
    * `./node_modules/.bin/eslint -c .eslintrc.js .` for javascript projects.
    * `./node_modules/.bin/eslint -c .eslintrc.js . --ext .ts` for typescript projects.
 4. Configure your IDE to use ESLint to check automatically. In VS Code it should be enough to install the ESLint extension and everything should be picked up automatically.
+5. Brew some tea to cope with all your new linter errors.
