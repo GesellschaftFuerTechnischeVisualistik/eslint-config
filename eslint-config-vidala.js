@@ -1,1 +1,1 @@
-module.exports = require('./src/vidala');
+export { default } from './src/vidala.js';
