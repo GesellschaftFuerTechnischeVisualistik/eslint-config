@@ -3,14 +3,15 @@ module.exports = {
     '@gtvmbh/eslint-config/eslint-config-ts'
   ],
   rules: {
-    
+
     // enforces consistent usage of uppercase functions with new operator
     'new-cap': [
-      'error', 
-      { 
+      'error',
+      {
         'capIsNewExceptions': [
-          // exceptions for angular decorators (@Component, @Input etc), array may be extended if needed.
-          'Component', 'NgModule', 'ViewChild', 'Injectable', 'Input', 'Output', 'HostListener', 'Pipe', 'Inject', 'Directive', 'HostBinding'
+          // Exceptions for angular decorators (@Component, @Input etc), array may be extended if needed.
+          // List of available decorators from https://angular.dev/api?type=decorator. Last checked 2026-02-25
+          'Attribute', 'Component', 'ContentChild', 'ContentChildren', 'Directive', 'Host', 'HostBinding', 'HostListener', 'Inject', 'Injectable', 'Input', 'NgModule', 'Optional', 'Output', 'Pipe', 'Self', 'SkipSelf', 'ViewChild', 'ViewChildren'
         ]
       }
     ]
