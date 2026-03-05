@@ -1,15 +1,18 @@
 import { defineConfig } from 'eslint/config';
 import stylistic from '@stylistic/eslint-plugin';
+import js from "@eslint/js";
 
 export default defineConfig([
   {
     plugins: {
-      '@stylistic': stylistic
+      '@stylistic': stylistic,
+      js
     },
     extends: [
       'js/recommended',
       'plugin:@stylistic/recommended-extends'
     ],
+    files: ["**/*.js", "**/*.jsx"],
     rules: {
       // Stylistic rules
       '@stylistic/brace-style': '1tbs', // one true brace style

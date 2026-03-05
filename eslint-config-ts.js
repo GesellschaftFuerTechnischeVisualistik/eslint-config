@@ -6,6 +6,7 @@ export default defineConfig([
   ...javascriptConfig,
   ...tseslint.configs.strictTypeChecked,
   {
+    files: ["**/*.ts", "**/*.tsx"],
     rules: {
       '@typescript-eslint/switch-exhaustiveness-check': ['error', {
         allowDefaultCaseForExhaustiveSwitch: false,
