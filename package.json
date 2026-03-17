@@ -1,6 +1,6 @@
 {
   "name": "@gtvmbh/eslint-config",
-  "version": "2.0.0-rc.1",
+  "version": "2.0.0-rc.2",
   "description": "ESLint configurations for various project types developed by Gesellschaft für Technische Visualistik",
   "main": "index.js",
   "scripts": {
@@ -17,11 +17,10 @@
   ],
   "author": "Gesellschaft für Technische Visualistik mbH",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "@eslint/js": "^10.0.0",
     "@stylistic/eslint-plugin": "^5.8.0",
     "eslint": "^10.0.0",
-    "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.0"
   }
 }
