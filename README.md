@@ -1,7 +1,7 @@
 # Using the GTV ESLint configurations
 
 1. Run `npm i @gtvmbh/eslint-config --save-dev` to install the GTV ESLint configuration. Take note of the messages about missing peer dependencies.
-2. Add a file named `eslint.config.js` in the project root. Pick the configuration that fits your project type:
+2. Add a file named `eslint.config.mjs` in the project root (or set `"type": "module"` in your `package.json` if you want to keep `eslint.config.js`). Pick the configuration that fits your project type:
    * JavaScript:
      ```js
      import jsConfig from '@gtvmbh/eslint-config';
@@ -10,20 +10,20 @@
      ```
    * TypeScript:
      ```js
-     import tsConfig from '@gtvmbh/eslint-config/eslint-config-ts';
+     import tsConfig from '@gtvmbh/eslint-config/typescript';
 
      export default tsConfig;
      ```
    * Angular:
      ```js
-     import angularConfig from '@gtvmbh/eslint-config/eslint-config-angular';
+     import angularConfig from '@gtvmbh/eslint-config/angular';
 
      export default angularConfig;
      ```
    * ViDaLa (layer on top of TypeScript):
      ```js
-     import tsConfig from '@gtvmbh/eslint-config/eslint-config-ts';
-     import vidalaConfig from '@gtvmbh/eslint-config/eslint-config-vidala';
+     import tsConfig from '@gtvmbh/eslint-config/typescript';
+     import vidalaConfig from '@gtvmbh/eslint-config/vidala';
 
      export default [
        ...tsConfig,
