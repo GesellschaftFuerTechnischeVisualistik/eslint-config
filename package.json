@@ -1,8 +1,17 @@
 {
   "name": "@gtvmbh/eslint-config",
-  "version": "2.0.0-rc.2",
+  "version": "2.0.0-rc.3",
   "description": "ESLint configurations for various project types developed by Gesellschaft für Technische Visualistik",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./typescript": "./eslint-config-ts.js",
+    "./typescript.js": "./eslint-config-ts.js",
+    "./angular": "./eslint-config-angular.js",
+    "./angular.js": "./eslint-config-angular.js",
+    "./vidala": "./eslint-config-vidala.js",
+    "./vidala.js": "./eslint-config-vidala.js"
+  },
   "scripts": {
     "test": "echo \"Warning: no test specified\""
   },

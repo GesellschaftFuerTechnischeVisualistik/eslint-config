@@ -1,6 +1,6 @@
 import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
-import javascriptConfig from './index';
+import javascriptConfig from './index.js';
 
 export default defineConfig([
   ...javascriptConfig,
