@@ -4,13 +4,9 @@ import js from '@eslint/js';
 
 export default defineConfig([
   {
-    plugins: {
-      '@stylistic': stylistic,
-      js
-    },
     extends: [
-      'js/recommended',
-      'plugin:@stylistic/recommended-extends'
+      js.configs.recommended,
+      stylistic.configs.recommended
     ],
     files: ['**/*.js', '**/*.jsx'],
     rules: {
