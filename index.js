@@ -11,20 +11,19 @@ export default defineConfig([
     files: ['**/*.js', '**/*.jsx'],
     rules: {
       // Stylistic rules
-      '@stylistic/brace-style': '1tbs', // one true brace style
+      '@stylistic/brace-style': ['error', '1tbs'], // one true brace style
       '@stylistic/no-extra-semi': 'error',
       '@stylistic/no-multiple-empty-lines': ['error', {
         max: 1,
         maxBOF: 0,
         maxEOF: 1
       }],
-      '@stylistic/padding-line-between-statements': ['error', [
-        {
+      '@stylistic/padding-line-between-statements': ['error', {
           blankLine: 'always',
           prev: '*',
           next: 'return'
         }
-      ]],
+      ],
 
       // ESLint rules
       'function-paren-newline': 'error',

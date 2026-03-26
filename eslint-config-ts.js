@@ -6,7 +6,6 @@ export default defineConfig([
   ...javascriptConfig,
   ...tseslint.configs.strictTypeChecked,
   {
-    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
     languageOptions: {
       parserOptions: {
         projectService: true
