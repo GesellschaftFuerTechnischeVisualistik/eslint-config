@@ -19,11 +19,12 @@ export default defineConfig([
         maxEOF: 1
       }],
       '@stylistic/padding-line-between-statements': ['error', {
-          blankLine: 'always',
-          prev: '*',
-          next: 'return'
-        }
+        blankLine: 'always',
+        prev: '*',
+        next: 'return'
+      }
       ],
+      '@stylistic/semi': ['error', 'always'],
 
       // ESLint rules
       'function-paren-newline': 'error',
