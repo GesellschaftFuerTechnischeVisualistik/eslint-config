@@ -2,8 +2,15 @@ import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 import javascriptConfig from './index.js';
 
+const inheritedJavascriptConfig = javascriptConfig.map((config) => {
+  return {
+    ...config,
+    files: [...new Set([...config.files, '**/*.ts', '**/*.tsx'])]
+  };
+});
+
 export default defineConfig([
-  ...javascriptConfig,
+  ...inheritedJavascriptConfig,
   ...tseslint.configs.strictTypeChecked,
   {
     languageOptions: {
@@ -17,7 +24,7 @@ export default defineConfig([
     rules: {
       '@typescript-eslint/member-ordering': 'off',
       '@typescript-eslint/no-confusing-void-expression': ['error', {
-        ignoreErrorShorthand: true
+        ignoreArrowShorthand: true
       }],
       '@typescript-eslint/no-extraneous-class': ['error', {
         allowWithDecorator: true
