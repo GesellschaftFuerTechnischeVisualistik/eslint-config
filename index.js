@@ -25,9 +25,22 @@ export default defineConfig([
       }
       ],
       '@stylistic/semi': ['error', 'always'],
+      '@stylistic/member-delimiter-style': ['error', {
+        multiline: {
+          delimiter: 'semi',
+          requireLast: true
+        },
+        singleline: {
+          delimiter: 'semi',
+          requireLast: false
+        },
+        multilineDetection: 'brackets'
+      }],
+      '@stylistic/function-paren-newline': ['error', 'multiline-arguments'],
+      '@stylistic/arrow-parens': ['error', 'always'],
+      '@stylistic/comma-dangle': ['error', 'never'],
 
       // ESLint rules
-      'function-paren-newline': 'error',
       'max-lines': 'off',
       'max-lines-per-function': 'off',
       'max-nested-callbacks': ['warn', { max: 3 }],
