@@ -13,7 +13,8 @@
     "./vidala.js": "./eslint-config-vidala.js"
   },
   "scripts": {
-    "test": "echo \"Warning: no test specified\""
+    "test": "echo \"Warning: no test specified\"",
+    "inspect": "eslint-config-inspector --config examples/eslint.config.typescript.js"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,8 @@
     "@stylistic/eslint-plugin": "^5.8.0",
     "eslint": "^10.0.0",
     "typescript-eslint": "^8.56.0"
+  },
+  "devDependencies": {
+    "@eslint/config-inspector": "^3.0.4"
   }
 }

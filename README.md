@@ -34,3 +34,7 @@
    * `./node_modules/.bin/eslint .`
 4. Configure your IDE to use ESLint to check automatically. In VS Code it should be enough to install the ESLint extension and everything should be picked up automatically.
 5. Brew some tea to cope with all your new linter errors.
+
+## Inspecting the configuration
+
+To review and inspect the typescript configuration, execute `npm run inspect`. Any other config file can be inspected with `npx @eslint/config-inspector@latest --config <FILE>`. The inspector runs von `localhost:7777` and provides an overview of all configuration objects, as well as all applied rules and their configuration.
