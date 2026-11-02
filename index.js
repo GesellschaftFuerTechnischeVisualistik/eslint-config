@@ -18,6 +18,7 @@ export default defineConfig([
         maxBOF: 0,
         maxEOF: 1
       }],
+      '@stylistic/padded-blocks': 'off',
       '@stylistic/padding-line-between-statements': ['error', {
         blankLine: 'always',
         prev: '*',
