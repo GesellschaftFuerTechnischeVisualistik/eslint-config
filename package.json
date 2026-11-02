@@ -1,18 +1,26 @@
 {
   "name": "@gtvmbh/eslint-config",
-  "version": "1.1.8",
+  "version": "2.0.1",
   "description": "ESLint configurations for various project types developed by Gesellschaft für Technische Visualistik",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./typescript": "./eslint-config-ts.js",
+    "./typescript.js": "./eslint-config-ts.js",
+    "./angular": "./eslint-config-angular.js",
+    "./angular.js": "./eslint-config-angular.js",
+    "./vidala": "./eslint-config-vidala.js",
+    "./vidala.js": "./eslint-config-vidala.js"
+  },
   "scripts": {
-    "test": "echo \"Warning: no test specified\""
+    "test": "echo \"Warning: no test specified\"",
+    "inspect": "eslint-config-inspector --config examples/eslint.config.typescript.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/GesellschaftFuerTechnischeVisualistik/gtv-linter-config.git"
   },
-  "engines": {
-    "node": ">=16.0.0 <=18.x.x"
-  },
+  "type": "module",
   "keywords": [
     "eslint",
     "eslintconfig"
@@ -20,8 +28,12 @@
   "author": "Gesellschaft für Technische Visualistik mbH",
   "license": "MIT",
   "dependencies": {
-    "eslint": "^8.47.0",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1"
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.14.0",
+    "typescript-eslint": "^8.72.1"
+  },
+  "devDependencies": {
+    "@eslint/config-inspector": "^3.5.0"
   }
 }
